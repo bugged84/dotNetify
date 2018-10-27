@@ -17,7 +17,7 @@ namespace WebApplication.ViewModels
       public ChatRoomLobbyVM()
       {
          this.RegisterRoutes(
-            "ChatRoomLobby"
+            "chat-rooms"
           , new List<RouteTemplate>
             {
                new RouteTemplate("ChatRoomList")

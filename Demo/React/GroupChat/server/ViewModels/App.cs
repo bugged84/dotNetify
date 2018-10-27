@@ -46,7 +46,8 @@ namespace WebApplication.ViewModels
                }
              , new RouteTemplate("ChatRoomLobby")
                {
-                  VMType = typeof(ChatRoomLobbyVM)
+                  UrlPattern = "chat-rooms"
+                , VMType = typeof(ChatRoomLobbyVM)
                }
             }
          );
