@@ -1,8 +1,10 @@
 import React from 'react';
 import dotnetify from 'dotnetify';
 import ReactDOM from 'react-dom';
+
 import App from './App';
-import ChatRoomIndex, { Lobby } from './ChatRoomIndex';
+import ChatRoomIndex from './ChatRoomIndex';
+import Lobby from './Lobby';
 import ChatRoom from './ChatRoom';
 
 dotnetify.debug = true;
