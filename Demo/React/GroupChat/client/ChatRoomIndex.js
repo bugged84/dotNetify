@@ -7,7 +7,8 @@ class ChatRoomIndex extends React.Component {
         super(props);
 
         this.state = {
-            ChatRooms: []
+            ChatRooms: [],
+            lobby: true
         };
 
         this.vm = dotnetify.react.connect('ChatRoomIndexVM', this);
@@ -15,7 +16,8 @@ class ChatRoomIndex extends React.Component {
         this.vm.onRouteEnter = (path, template) => {
             console.log(path);
             console.log(template);
-            template.Target = 'Content';
+            template.Target = 'Content2';
+            this.setState({ lobby: template.Id === 'Lobby' });
         };
     }
 
@@ -34,11 +36,14 @@ class ChatRoomIndex extends React.Component {
 
         return (
             <div>
-                <div>{chatRooms}</div>
-                <div id="Content" />
+                {this.state.lobby && <div>{chatRooms}</div>}
+                <div id="Content2" />
             </div>
         );
     }
 }
 
+const Lobby = () => <div />;
+
+export { Lobby };
 export default ChatRoomIndex;

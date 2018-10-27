@@ -20,7 +20,11 @@ namespace WebApplication.ViewModels
             "ChatRoomIndex"
           , new List<RouteTemplate>
             {
-               new RouteTemplate("ChatRoom")
+               new RouteTemplate("Lobby")
+               {
+                  UrlPattern = ""
+               }
+             , new RouteTemplate("ChatRoom")
                {
                   UrlPattern = "(/:id)"
                 , VMType = typeof(ChatRoomVM)
@@ -30,11 +34,31 @@ namespace WebApplication.ViewModels
 
          ChatRooms = new List<object>
          {
-            new {Id = 1, Route = this.GetRoute("ChatRoom", "1")}
-          , new {Id = 2, Route = this.GetRoute("ChatRoom", "2")}
-          , new {Id = 3, Route = this.GetRoute("ChatRoom", "3")}
-          , new {Id = 4, Route = this.GetRoute("ChatRoom", "4")}
-          , new {Id = 5, Route = this.GetRoute("ChatRoom", "5")}
+            new
+            {
+               Id = 1
+             , Route = this.GetRoute("ChatRoom", "1")
+            }
+          , new
+            {
+               Id = 2
+             , Route = this.GetRoute("ChatRoom", "2")
+            }
+          , new
+            {
+               Id = 3
+             , Route = this.GetRoute("ChatRoom", "3")
+            }
+          , new
+            {
+               Id = 4
+             , Route = this.GetRoute("ChatRoom", "4")
+            }
+          , new
+            {
+               Id = 5
+             , Route = this.GetRoute("ChatRoom", "5")
+            }
          };
       }
    }
