@@ -4,7 +4,7 @@ using DotNetify.Routing;
 
 namespace WebApplication.ViewModels
 {
-   public class ChatRoomIndexVM : BaseVM, IRoutable
+   public class ChatRoomLobbyVM : BaseVM, IRoutable
    {
       #region IRoutable Properties
 
@@ -14,10 +14,10 @@ namespace WebApplication.ViewModels
 
       public IEnumerable<object> ChatRooms { get; set; }
 
-      public ChatRoomIndexVM()
+      public ChatRoomLobbyVM()
       {
          this.RegisterRoutes(
-            "ChatRoomIndex"
+            "ChatRoomLobby"
           , new List<RouteTemplate>
             {
                new RouteTemplate("ChatRoomList")

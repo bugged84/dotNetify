@@ -4,7 +4,7 @@ import { RouteLink } from 'dotnetify/dist/dotnetify-react';
 
 import ChatRoomList from './ChatRoomList';
 
-class ChatRoomIndex extends React.Component {
+class ChatRoomLobby extends React.Component {
     constructor(props) {
         super(props);
 
@@ -13,7 +13,7 @@ class ChatRoomIndex extends React.Component {
             showChatRoomList: true
         };
 
-        this.vm = dotnetify.react.connect('ChatRoomIndexVM', this);
+        this.vm = dotnetify.react.connect('ChatRoomLobbyVM', this);
 
         this.vm.onRouteEnter = (path, template) => {
             //console.log(path);
@@ -45,4 +45,4 @@ class ChatRoomIndex extends React.Component {
     }
 }
 
-export default ChatRoomIndex;
+export default ChatRoomLobby;

@@ -28,7 +28,7 @@ namespace WebApplication.ViewModels
          {
             new Link
             {
-               Route = this.GetRoute("ChatRoomIndex")
+               Route = this.GetRoute("ChatRoomLobby")
              , Caption = "Chat Rooms"
             }
          };
@@ -42,11 +42,11 @@ namespace WebApplication.ViewModels
                new RouteTemplate("Home")
                {
                   UrlPattern = ""
-                , ViewUrl = "ChatRoomIndex"
+                , ViewUrl = "ChatRoomLobby"
                }
-             , new RouteTemplate("ChatRoomIndex")
+             , new RouteTemplate("ChatRoomLobby")
                {
-                  VMType = typeof(ChatRoomIndexVM)
+                  VMType = typeof(ChatRoomLobbyVM)
                }
             }
          );
