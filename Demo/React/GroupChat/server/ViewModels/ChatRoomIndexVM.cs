@@ -20,7 +20,7 @@ namespace WebApplication.ViewModels
             "ChatRoomIndex"
           , new List<RouteTemplate>
             {
-               new RouteTemplate("Lobby")
+               new RouteTemplate("ChatRoomList")
                {
                   UrlPattern = ""
                }
